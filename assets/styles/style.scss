@@ -1,5 +1,16 @@
 @import 'variables';
 
+:root{
+    --light-background: #F6F8FF;
+    --light-background-content: #FEFEFE;
+    --light-backgroudn-text: #4B6A9B;
+    --light-background-text-alt: #2B3442;
+    --light-shadow-active: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    --light-shadow-inactive: 0px 16px 30px -10px rgba(0,0,0,0.2);
+    --button: #0079FF;
+    --button-hover: #60ABFF;
+}
+
 @mixin desktop {
     @media (min-width: #{$desktop}) {
         @content;
@@ -43,6 +54,7 @@ body {
     padding-top: 8%;
     h1 {
         font-size: $devfinderDesktopFontSize;
+        font-weight: $bigFontWeight;
         color: $devfinderBlackColor;
     }
     p {
@@ -293,14 +305,14 @@ body {
     font-weight: $smallFontWeight;
     line-height: 16px;
     letter-spacing: 1px;
-    @include tablet {
-        font-size: $backgroundModeFontSize;
-    }
+        @include tablet {
+            font-size: $backgroundModeFontSize;
+        }
     }
     .stat-value {
-        color: $gitUsernameColor;
-        font-size: $buttonDesktopFontSize;
-        font-weight: bold;
+    color: $gitUsernameColor;
+    font-size: $buttonDesktopFontSize;
+    font-weight: bold;
         @include tablet {
             font-size: 25px;
             text-align: start;
@@ -347,8 +359,7 @@ body {
     }
 }
 
-.active {
-    
+.active{
+    box-shadow: $activeShadow;
 }
-
 
