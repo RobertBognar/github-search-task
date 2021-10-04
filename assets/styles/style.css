@@ -24,6 +24,7 @@ body {
 @media (min-width: 1440px) {
   .container {
     max-width: 730px;
+    margin-top: 32px;
   }
 }
 
@@ -87,8 +88,8 @@ body {
   background-color: #FEFEFE;
   border-radius: 15px;
   margin-top: 8%;
-  -webkit-box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.25);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,6 +111,12 @@ body {
   .searchbar-container {
     background-size: 4%;
     background-position-x: 4%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .searchbar-container {
+    height: 69px;
   }
 }
 
@@ -259,14 +266,20 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 768px) {
   .profile-container {
     margin-top: 24px;
     width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .profile-container {
+    min-height: 419px;
   }
 }
 
@@ -540,7 +553,7 @@ body {
   position: relative;
   color: #F74646;
   font-weight: bold;
-  left: 140px;
+  left: 130px;
 }
 
 @media (min-width: 768px) {

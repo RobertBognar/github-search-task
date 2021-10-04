@@ -31,6 +31,7 @@ body {
     }
     @include desktop {
         max-width: 730px;
+        margin-top: 32px;
     }
 }
 
@@ -43,7 +44,6 @@ body {
     h1 {
         font-size: $devfinderDesktopFontSize;
         color: $devfinderBlackColor;
-        
     }
     p {
         font-size: $statsNameDesktopFontSize;
@@ -87,6 +87,9 @@ body {
     @include tablet {
         background-size: 4%;
         background-position-x: 4%;
+    }
+    @include desktop {
+        height: 69px;
     }
     label {
         flex: 1;
@@ -165,6 +168,9 @@ body {
     @include tablet {
         margin-top: 24px;
         width: 100%;
+    }
+    @include desktop {
+        min-height: 419px;
     }
 }
 
@@ -332,7 +338,7 @@ body {
     position: relative;
     color: $errorTextColor;
     font-weight: bold;
-    left: 140px;
+    left: 130px;
     @include tablet {
         left: 350px;
     }
