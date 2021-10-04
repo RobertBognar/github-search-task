@@ -18,15 +18,15 @@
         <div class="container">
             <div class="header">
                 <h1 class="title">devfinder</h1>
-                <div id="button-mode">
+                <div class="button-mode" id="button-mode">
                     <p id="text-mode">DARK</p>
                     <div class="icon-container"><img id="mode-icon" src="./assets/images/icon-moon.svg"
                             alt="dark mode icon"></div>
                 </div>
             </div>
-            <div class="searchbar-active-container">
+            <div class="searchbar-container active">
                 <label for="input">
-                    <input type="search" name="user-input" id="input" placeholder="Search Github username...">
+                    <input class="input" type="search" name="user-input" id="input" placeholder="Search GitHub username...">
                 </label>
                 <button class="button-search" id="submit">Search</button>
                 <div class="error">
@@ -47,15 +47,15 @@
                     </div>
                     <p id="bio"></p>
                     <div class="profile-stats-container">
-                        <div class="profile-stat">
+                        <div class="profile-stats">
                             <p class="stat-title">Repos</p>
                             <p class="stat-value" id="repos"></p>
                         </div>
-                        <div class="profile-stat">
+                        <div class="profile-stats">
                             <p class="stat-title">Followers</p>
                             <p class="stat-value" id="followers"></p>
                         </div>
-                        <div class="profile-stat">
+                        <div class="profile-stats">
                             <p class="stat-title">Following</p>
                             <p class="stat-value" id="following"></p>
                         </div>
