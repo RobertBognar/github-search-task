@@ -1,5 +1,4 @@
-//Importing variables & Root elements from CSS for toggle mode
-const root = document.documentElement.style;
+//Importing variables 
 const searchBar = document.querySelector('.searchbar-container');
 const profileContainer = document.querySelector('.profile-container');
 //Using params for shorter code and passing it to getElementById

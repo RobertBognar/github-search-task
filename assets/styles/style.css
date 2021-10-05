@@ -390,12 +390,14 @@ body {
 }
 
 #user {
+  margin-left: 1%;
   color: #0079FF;
 }
 
 @media (min-width: 768px) {
   #user {
     font-size: 16px;
+    margin-left: 2%;
   }
 }
 
@@ -445,6 +447,24 @@ body {
 #bio {
   line-height: 25px;
   color: #4B6A9B;
+  padding-top: 10px;
+  width: 289px;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  #bio {
+    width: 493px;
+    font-size: 15px;
+    margin-top: -24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #bio {
+    font-size: 15px;
+    padding-top: 28px;
+  }
 }
 
 #date {
@@ -467,6 +487,7 @@ body {
 @media (min-width: 1440px) {
   #date {
     margin-left: 32%;
+    font-size: 15px;
   }
 }
 
@@ -528,6 +549,12 @@ body {
 @media (min-width: 768px) {
   .profile-stats .stat-title {
     font-size: 13px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .profile-stats .stat-title {
+    font-weight: 400;
   }
 }
 

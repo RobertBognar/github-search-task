@@ -249,9 +249,11 @@ body {
 }
 
 #user {
+    margin-left: 1%;
     color: $atUsernameColor;
     @include tablet {
         font-size: $buttonDesktopFontSize;
+        margin-left: 2%;
     }
 }
 
@@ -283,6 +285,19 @@ body {
 #bio {
     line-height: 25px;
     color: $networkTextColor;
+    padding-top: 10px;
+    
+    width: 289px;
+    font-size: 13px;
+    @include tablet {
+        width: 493px;
+        font-size: 15px;
+        margin-top: -24px;
+    }
+    @include desktop {
+        font-size: 15px;
+        padding-top: 28px;
+    }
 }
 
 #date {
@@ -299,6 +314,7 @@ body {
     }
     @include desktop {
         margin-left: 32%;
+        font-size: 15px;
     }
 }
 
@@ -332,6 +348,9 @@ body {
     letter-spacing: 1px;
         @include tablet {
             font-size: $backgroundModeFontSize;
+        }
+        @include desktop {
+            font-weight: $smallFontWeight;
         }
     }
     .stat-value {
