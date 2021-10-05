@@ -15,14 +15,14 @@ function darkModeSettings() {
     followers.style.color = '#FEFEFE';
     get('followingStats').style.color = '#FEFEFE';
     following.style.color = '#FEFEFE';
-    userLocation.style.color = '#FEFEFE'
-    userPage.style.color = '#FEFEFE'
-    userTwitter.style.color = '#FEFEFE'
-    userCompany.style.color = '#FEFEFE'
+    userLocation.style.color = '#FEFEFE';
+    userPage.style.color = '#FEFEFE';
+    userTwitter.style.color = '#FEFEFE';
+    userCompany.style.color = '#FEFEFE';
 
 
-    textMode.style.color = '#FEFEFE'
-    textMode.innerText = 'LIGHT'
+    textMode.style.color = '#FEFEFE';
+    textMode.innerText = 'LIGHT';
     bio.innerText = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
     iconMode.src = "./assets/images/icon-sun.svg";
     darkMode = true;
@@ -42,14 +42,14 @@ function lightModeSettings() {
     followers.style.color = '#2B3442';
     get('followingStats').style.color = '#4B6A9B';
     following.style.color = '#2B3442';
-    userLocation.style.color = '#4B6A9B'
-    userPage.style.color = '#4B6A9B'
-    userTwitter.style.color = '#4B6A9B'
-    userCompany.style.color = '#4B6A9B'
+    userLocation.style.color = '#4B6A9B';
+    userPage.style.color = '#4B6A9B';
+    userTwitter.style.color = '#4B6A9B';
+    userCompany.style.color = '#4B6A9B';
 
 
-    textMode.style.color = "#4B6A9B"
-    textMode.innerText = "DARK"
+    textMode.style.color = "#4B6A9B";
+    textMode.innerText = "DARK";
     bio.innerText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
     iconMode.src = "./assets/images/icon-moon.svg";
     darkMode = false;
