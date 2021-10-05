@@ -444,6 +444,30 @@ body {
 
 #bio {
   line-height: 25px;
+  color: #4B6A9B;
+}
+
+#date {
+  color: #697C9A;
+  margin-left: 0.5%;
+  margin-top: 2%;
+  font-size: 13px;
+  width: 144px;
+  height: 19px;
+}
+
+@media (min-width: 768px) {
+  #date {
+    margin-left: 1%;
+    width: 166px;
+    height: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #date {
+    margin-left: 32%;
+  }
 }
 
 .profile-stats-container {
@@ -557,6 +581,7 @@ body {
 
 .profile-bottom-container .profile-info p {
   margin-left: 18px;
+  color: #4B6A9B;
 }
 
 .profile-bottom-container .network-icons {

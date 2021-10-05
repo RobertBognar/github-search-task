@@ -282,6 +282,24 @@ body {
 
 #bio {
     line-height: 25px;
+    color: $networkTextColor;
+}
+
+#date {
+    color: $darkModeColor;
+    margin-left: 0.5%;
+    margin-top: 2%;
+    font-size: 13px;
+    width: 144px;
+    height: 19px;
+    @include tablet {
+        margin-left: 1%;
+        width: 166px;
+        height: 22px;
+    }
+    @include desktop {
+        margin-left: 32%;
+    }
 }
 
 .profile-stats-container {
@@ -342,6 +360,7 @@ body {
         display: flex;
         p {
             margin-left: 18px;
+            color: $networkTextColor;
         }
     }
     .network-icons {

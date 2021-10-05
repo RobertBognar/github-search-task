@@ -98,7 +98,7 @@ function profileUpdate(data) {
         user.innerText = `@${data.login}`
         datesegments = data.created_at.split("T").shift().split("-")
         date.innerText = `Joined ${datesegments[2]} ${months[datesegments[1] - 1]} ${datesegments[0]}`
-        bio.innerText = (data.bio == null) ? "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros." : `${data.bio}`
+        bio.innerText = (data.bio == null) ? "This profile has no bio." : `${data.bio}`
         repos.innerText = `${data.public_repos}`
         followers.innerText = `${data.followers}`
         following.innerText = `${data.following}`
@@ -123,8 +123,22 @@ function darkModeSettings() {
     document.getElementById("name").style.color = "#FEFEFE";
     document.getElementById("date").style.color = "#FEFEFE";
     document.getElementById("bio").style.color = "#FEFEFE";
+    document.getElementById("profileStatsContainer").style.backgroundColor = "#141D2F";
+    document.getElementById('reposStat').style.color = '#FEFEFE';
+    document.getElementById('repos').style.color = '#FEFEFE';
+    document.getElementById('followersStat').style.color = '#FEFEFE';
+    document.getElementById('followers').style.color = '#FEFEFE';
+    document.getElementById('followingStats').style.color = '#FEFEFE';
+    document.getElementById('following').style.color = '#FEFEFE';
+    document.getElementById('location').style.color = '#FEFEFE'
+    document.getElementById('page').style.color = '#FEFEFE'
+    document.getElementById('twitter').style.color = '#FEFEFE'
+    document.getElementById('company').style.color = '#FEFEFE'
+
+
     textMode.style.color = "#FEFEFE"
     textMode.innerText = "LIGHT"
+    bio.innerText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
     iconMode.src = "./assets/images/icon-sun.svg";
     darkMode = true;
 }
@@ -136,8 +150,22 @@ function lightModeSettings() {
     document.getElementById("name").style.color = "#2B3442";
     document.getElementById("date").style.color = "#697C9A";
     document.getElementById("bio").style.color = "#4B6A9B";
+    document.getElementById("profileStatsContainer").style.backgroundColor = "#F6F8FF";
+    document.getElementById('reposStat').style.color = '#4B6A9B';
+    document.getElementById('repos').style.color = '#2B3442';
+    document.getElementById('followersStat').style.color = '#4B6A9B';
+    document.getElementById('followers').style.color = '#2B3442';
+    document.getElementById('followingStats').style.color = '#4B6A9B';
+    document.getElementById('following').style.color = '#2B3442';
+    document.getElementById('location').style.color = '#4B6A9B'
+    document.getElementById('page').style.color = '#4B6A9B'
+    document.getElementById('twitter').style.color = '#4B6A9B'
+    document.getElementById('company').style.color = '#4B6A9B'
+
+
     textMode.style.color = "#4B6A9B"
     textMode.innerText = "DARK"
+    bio.innerText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
     iconMode.src = "./assets/images/icon-moon.svg";
     darkMode = false;
 }
