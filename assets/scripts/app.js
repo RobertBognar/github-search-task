@@ -1,4 +1,4 @@
-//Importing variables 
+//Importing variables & defining all variables
 const searchBar = document.querySelector('.searchbar-container');
 const profileContainer = document.querySelector('.profile-container');
 //Using params for shorter code and passing it to getElementById
@@ -30,38 +30,6 @@ let userCompany = get('company');
 let darkMode = false;
 //API URL
 const url = 'https://api.github.com/users/';
-
-//Buttons
-buttonSubmit.addEventListener('click', function () {
-    if (input.value !== "") {
-        fetchUserData(url + input.value);
-    }
-});
-//Enabling search on enter key
-input.addEventListener("keydown", function (e) {
-    if (!e) {
-        let e = window.event;
-    }
-    if (e.key == "Enter") {
-        if (input.value !== "") {
-            fetchUserData(url + input.value);
-        }
-    }
-}, false);
-
-input.addEventListener('input', function () {
-    noResult.style.display = "none"
-    profileContainer.classList.remove('active');
-    searchBar.classList.add('active')
-});
-
-btnMode.addEventListener('click', function () {
-    if (darkMode === false) {
-        darkModeSettings();
-    } else {
-        lightModeSettings();
-    }
-})
 
 //Functions
 function fetchUserData(git) {
@@ -112,62 +80,6 @@ function profileUpdate(data) {
     }
 }
 
-//Dark & Light Mode Settings Toggle
-
-function darkModeSettings() {
-    document.body.style.backgroundColor = '#141D2F';
-    document.getElementById('devfinder').style.color = "#FEFEFE";
-    document.getElementById('searchbar').style.backgroundColor = "#1E2A47";
-    document.getElementById("profilecontainer").style.backgroundColor = "#1E2A47";
-    document.getElementById("name").style.color = "#FEFEFE";
-    document.getElementById("date").style.color = "#FEFEFE";
-    document.getElementById("bio").style.color = "#FEFEFE";
-    document.getElementById("profileStatsContainer").style.backgroundColor = "#141D2F";
-    document.getElementById('reposStat').style.color = '#FEFEFE';
-    document.getElementById('repos').style.color = '#FEFEFE';
-    document.getElementById('followersStat').style.color = '#FEFEFE';
-    document.getElementById('followers').style.color = '#FEFEFE';
-    document.getElementById('followingStats').style.color = '#FEFEFE';
-    document.getElementById('following').style.color = '#FEFEFE';
-    document.getElementById('location').style.color = '#FEFEFE'
-    document.getElementById('page').style.color = '#FEFEFE'
-    document.getElementById('twitter').style.color = '#FEFEFE'
-    document.getElementById('company').style.color = '#FEFEFE'
-
-
-    textMode.style.color = "#FEFEFE"
-    textMode.innerText = "LIGHT"
-    bio.innerText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
-    iconMode.src = "./assets/images/icon-sun.svg";
-    darkMode = true;
-}
-function lightModeSettings() {
-    document.body.style.backgroundColor = '#F6F8FF';
-    document.getElementById("devfinder").style.color = "#222731";
-    document.getElementById("searchbar").style.backgroundColor = "#FEFEFE";
-    document.getElementById("profilecontainer").style.backgroundColor = "#FEFEFE";
-    document.getElementById("name").style.color = "#2B3442";
-    document.getElementById("date").style.color = "#697C9A";
-    document.getElementById("bio").style.color = "#4B6A9B";
-    document.getElementById("profileStatsContainer").style.backgroundColor = "#F6F8FF";
-    document.getElementById('reposStat').style.color = '#4B6A9B';
-    document.getElementById('repos').style.color = '#2B3442';
-    document.getElementById('followersStat').style.color = '#4B6A9B';
-    document.getElementById('followers').style.color = '#2B3442';
-    document.getElementById('followingStats').style.color = '#4B6A9B';
-    document.getElementById('following').style.color = '#2B3442';
-    document.getElementById('location').style.color = '#4B6A9B'
-    document.getElementById('page').style.color = '#4B6A9B'
-    document.getElementById('twitter').style.color = '#4B6A9B'
-    document.getElementById('company').style.color = '#4B6A9B'
-
-
-    textMode.style.color = "#4B6A9B"
-    textMode.innerText = "DARK"
-    bio.innerText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
-    iconMode.src = "./assets/images/icon-moon.svg";
-    darkMode = false;
-}
 profileContainer.classList.toggle('active');
-searchBar.classList.toggle('active');
+
 
