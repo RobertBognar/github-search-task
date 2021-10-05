@@ -31,3 +31,65 @@ let userCompany = get('company');
 let darkMode = false;
 //API URL
 const url = 'https://api.github.com/users/';
+
+//Buttons
+buttonSubmit.addEventListener('click', function () {
+    if (input.value !== "") {
+        fetchUserData(url + input.value);
+    }
+});
+//Enabling search on enter key
+input.addEventListener("keydown", function (e) {
+    if (!e) {
+        let e = window.event;
+    }
+    if (e.key == "Enter") {
+        if (input.value !== "") {
+            fetchUserData(url + input.value);
+        }
+    }
+}, false);
+input.addEventListener('input', function () {
+    noResult.style.display = "none"
+    profileContainer.classList.remove('active');
+    searchBar.classList.add('active')
+});
+btnMode.addEventListener('click', function () {
+    if (darkMode == false) {
+        darkModeSettings()
+    } else {
+        lightModeSettings()
+    }
+})
+
+//Functions
+function fetchUserData(git) {
+    fetch(git)
+        .then(response => response.json())
+        .then(data => {
+            profileUpdate(data)
+        })
+        .catch(error => {
+            throw error;
+        })
+}
+
+function profileUpdate(data) {
+    if (data.message !== "Not Found") {
+        noResult.style.display = "none";
+        function checkNull(paramOne, paramTwo) {
+            if ((paramOne === "") || (paramOne === null)) {
+                paramTwo.style.opacity = 0.5;
+                paramTwo.previousElementSibling.style.opacity = 0.5;
+                return "Not available"
+            } else {
+                return `${paramOne}`
+            }
+        }
+        //Importing values from API values 
+
+    } else {
+        noResult.style.display = "block";
+    }
+}
+
