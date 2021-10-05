@@ -117,9 +117,12 @@ function profileUpdate(data) {
 
 function darkModeSettings() {
     document.body.style.backgroundColor = '#141D2F';
-    document.getElementById("devfinder").style.color = "#FEFEFE";
-    document.getElementById("searchbar").style.backgroundColor = "#1E2A47";
+    document.getElementById('devfinder').style.color = "#FEFEFE";
+    document.getElementById('searchbar').style.backgroundColor = "#1E2A47";
     document.getElementById("profilecontainer").style.backgroundColor = "#1E2A47";
+    document.getElementById("name").style.color = "#FEFEFE";
+    document.getElementById("date").style.color = "#FEFEFE";
+    document.getElementById("bio").style.color = "#FEFEFE";
     textMode.style.color = "#FEFEFE"
     textMode.innerText = "LIGHT"
     iconMode.src = "./assets/images/icon-sun.svg";
@@ -129,6 +132,10 @@ function lightModeSettings() {
     document.body.style.backgroundColor = '#F6F8FF';
     document.getElementById("devfinder").style.color = "#222731";
     document.getElementById("searchbar").style.backgroundColor = "#FEFEFE";
+    document.getElementById("profilecontainer").style.backgroundColor = "#FEFEFE";
+    document.getElementById("name").style.color = "#2B3442";
+    document.getElementById("date").style.color = "#697C9A";
+    document.getElementById("bio").style.color = "#4B6A9B";
     textMode.style.color = "#4B6A9B"
     textMode.innerText = "DARK"
     iconMode.src = "./assets/images/icon-moon.svg";
