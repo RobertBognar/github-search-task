@@ -1,5 +1,4 @@
 //Dark & Light Mode Settings Toggle, using premade get param to short code
-
 function darkModeSettings() {
     document.body.style.backgroundColor = '#141D2F';
     get('devfinder').style.color = '#FEFEFE';
