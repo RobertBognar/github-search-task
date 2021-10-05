@@ -49,16 +49,18 @@ input.addEventListener("keydown", function (e) {
         }
     }
 }, false);
+
 input.addEventListener('input', function () {
     noResult.style.display = "none"
     profileContainer.classList.remove('active');
     searchBar.classList.add('active')
 });
+
 btnMode.addEventListener('click', function () {
-    if (darkMode == false) {
-        darkModeSettings()
+    if (darkMode === false) {
+        darkModeSettings();
     } else {
-        lightModeSettings()
+        lightModeSettings();
     }
 })
 
@@ -74,6 +76,10 @@ function fetchUserData(git) {
         })
 }
 
+//Octocat background start
+fetchUserData(url + "octocat");
+
+//Function for importing data from API
 function profileUpdate(data) {
     if (data.message !== "Not Found") {
         noResult.style.display = "none";
@@ -87,9 +93,34 @@ function profileUpdate(data) {
             }
         }
         //Importing values from API values 
-
+        avatar.src = `${data.avatar_url}`
+        userName.innerText = `${data.name}`
+        user.innerText = `@${data.login}`
+        datesegments = data.created_at.split("T").shift().split("-")
+        date.innerText = `Joined ${datesegments[2]} ${months[datesegments[1] - 1]} ${datesegments[0]}`
+        bio.innerText = (data.bio == null) ? "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros." : `${data.bio}`
+        repos.innerText = `${data.public_repos}`
+        followers.innerText = `${data.followers}`
+        following.innerText = `${data.following}`
+        userLocation.innerText = checkNull(data.location, userLocation)
+        page.innerText = checkNull(data.blog, page)
+        userTwitter.innerText = checkNull(data.twitter_username, userTwitter)
+        userCompany.innerText = checkNull(data.company, userCompany)
+        searchBar.classList.toggle('active')
+        profileContainer.classList.toggle('active')
     } else {
         noResult.style.display = "block";
     }
 }
+
+//Dark & Light Mode Settings Toggle
+
+function darkModeSettings() {
+
+}
+function lightModeSettings() {
+
+}
+profileContainer.classList.toggle('active');
+searchBar.classList.toggle('active');
 
