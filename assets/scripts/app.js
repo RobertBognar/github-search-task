@@ -116,10 +116,23 @@ function profileUpdate(data) {
 //Dark & Light Mode Settings Toggle
 
 function darkModeSettings() {
-
+    document.body.style.backgroundColor = '#141D2F';
+    document.getElementById("devfinder").style.color = "#FEFEFE";
+    document.getElementById("searchbar").style.backgroundColor = "#1E2A47";
+    document.getElementById("profilecontainer").style.backgroundColor = "#1E2A47";
+    textMode.style.color = "#FEFEFE"
+    textMode.innerText = "LIGHT"
+    iconMode.src = "./assets/images/icon-sun.svg";
+    darkMode = true;
 }
 function lightModeSettings() {
-
+    document.body.style.backgroundColor = '#F6F8FF';
+    document.getElementById("devfinder").style.color = "#222731";
+    document.getElementById("searchbar").style.backgroundColor = "#FEFEFE";
+    textMode.style.color = "#4B6A9B"
+    textMode.innerText = "DARK"
+    iconMode.src = "./assets/images/icon-moon.svg";
+    darkMode = false;
 }
 profileContainer.classList.toggle('active');
 searchBar.classList.toggle('active');
