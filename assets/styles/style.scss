@@ -90,9 +90,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-image: url("../images/icon-search.svg");
-    background-size: 6.5%;
+    background-size: 6%;
     background-repeat: no-repeat;
-    background-position-x: 12px;
+    background-position-x: 10px;
     background-position-y: center;
     @include tablet {
         background-size: 4%;
@@ -125,7 +125,7 @@ body {
         font-weight: $smallFontWeight;
         font-size: $statsNameDesktopFontSize;
         word-spacing: -4px;
-        padding-left: 2px;
+        padding-left: 4px;
         width: 100%;
         @include tablet {
             position: absolute;
@@ -134,7 +134,7 @@ body {
             line-height: $searchPlaceholderMobileLineHeight;
         }
         @include desktop {
-            left: 82px;
+            left: 76px;
         }
     }
 }
