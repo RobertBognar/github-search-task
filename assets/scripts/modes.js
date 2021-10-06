@@ -27,6 +27,7 @@ function darkModeSettings() {
     iconMode.src = './assets/images/icon-sun.svg';
     darkMode = true;
 }
+
 function lightModeSettings() {
     document.body.style.backgroundColor = '#F6F8FF';
     document.body.style.transition = '1s';
