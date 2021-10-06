@@ -52,7 +52,7 @@ function lightModeSettings() {
     textMode.style.color = '#4B6A9B';
     textMode.innerText = 'DARK';
     bio.innerText =
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
+        'This profile has no bio.';
     iconMode.src = './assets/images/icon-moon.svg';
     darkMode = false;
 }
