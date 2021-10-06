@@ -29,6 +29,7 @@ function darkModeSettings() {
 }
 function lightModeSettings() {
     document.body.style.backgroundColor = '#F6F8FF';
+    document.body.style.transition = '1s';
     get('devfinder').style.color = '#222731';
     get('searchbar').style.backgroundColor = '#FEFEFE';
     get('profilecontainer').style.backgroundColor = '#FEFEFE';
