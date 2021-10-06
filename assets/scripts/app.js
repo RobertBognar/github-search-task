@@ -4,19 +4,19 @@ const profileContainer = document.querySelector('.profile-container');
 //Using params for shorter code and passing it to getElementById
 const get = (param) => document.getElementById(`${param}`);
 //Header Params
-let btnMode = get('button-mode');
-let textMode = get('text-mode');
-let iconMode = get('mode-icon');
+const btnMode = get('button-mode');
+const textMode = get('text-mode');
+const iconMode = get('mode-icon');
 //Searchbar Container Params
-let buttonSubmit = get('submit');
-let input = get('input');
-let noResult = get('no-results');
+const buttonSubmit = get('submit');
+const input = get('input');
+const noResult = get('no-results');
 //Profile Container Params
-let avatar = get('avatar');
-let userName = get('name');
-let user = get('user');
-let date = get('date');
-let months = [
+const avatar = get('avatar');
+const userName = get('name');
+const user = get('user');
+const date = get('date');
+const months = [
     'Jan',
     'Feb',
     'Mar',
@@ -30,16 +30,16 @@ let months = [
     'Nov',
     'Dec',
 ];
-let bio = get('bio');
+const bio = get('bio');
 //Profile Stats Container Params
-let repos = get('repos');
-let followers = get('followers');
-let following = get('following');
+const repos = get('repos');
+const followers = get('followers');
+const following = get('following');
 //Profile Bottom Container Params
-let userLocation = get('location');
-let userPage = get('page');
-let userTwitter = get('twitter');
-let userCompany = get('company');
+const userLocation = get('location');
+const userPage = get('page');
+const userTwitter = get('twitter');
+const userCompany = get('company');
 let darkMode = false;
 //API URL
 const url = 'https://api.github.com/users/';
