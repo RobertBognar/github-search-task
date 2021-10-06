@@ -1,25 +1,29 @@
 //Buttons
 buttonSubmit.addEventListener('click', function () {
-    if (input.value !== "") {
+    if (input.value !== '') {
         fetchUserData(url + input.value);
     }
 });
 //Enabling search on enter key
-input.addEventListener("keydown", function (e) {
-    if (!e) {
-        let e = window.event;
-    }
-    if (e.key == "Enter") {
-        if (input.value !== "") {
-            fetchUserData(url + input.value);
+input.addEventListener(
+    'keydown',
+    function (e) {
+        if (!e) {
+            let e = window.event;
         }
-    }
-}, false);
+        if (e.key == 'Enter') {
+            if (input.value !== '') {
+                fetchUserData(url + input.value);
+            }
+        }
+    },
+    false,
+);
 
 input.addEventListener('input', function () {
-    noResult.style.display = "none"
+    noResult.style.display = 'none';
     profileContainer.classList.remove('active');
-    searchBar.classList.add('active')
+    searchBar.classList.add('active');
 });
 
 btnMode.addEventListener('click', function () {

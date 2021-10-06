@@ -20,11 +20,11 @@ function darkModeSettings() {
     userTwitter.style.color = '#FEFEFE';
     userCompany.style.color = '#FEFEFE';
 
-
     textMode.style.color = '#FEFEFE';
     textMode.innerText = 'LIGHT';
-    bio.innerText = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
-    iconMode.src = "./assets/images/icon-sun.svg";
+    bio.innerText =
+        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
+    iconMode.src = './assets/images/icon-sun.svg';
     darkMode = true;
 }
 function lightModeSettings() {
@@ -48,10 +48,10 @@ function lightModeSettings() {
     userTwitter.style.color = '#4B6A9B';
     userCompany.style.color = '#4B6A9B';
 
-
-    textMode.style.color = "#4B6A9B";
-    textMode.innerText = "DARK";
-    bio.innerText = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
-    iconMode.src = "./assets/images/icon-moon.svg";
+    textMode.style.color = '#4B6A9B';
+    textMode.innerText = 'DARK';
+    bio.innerText =
+        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
+    iconMode.src = './assets/images/icon-moon.svg';
     darkMode = false;
 }
