@@ -92,7 +92,7 @@ body {
 }
 
 .button-mode:hover {
-  cursor: pointer;
+  cursor: url("../images/pointer.png"), pointer;
 }
 
 .searchbar-container {
@@ -117,6 +117,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: 10px;
   background-position-y: center;
+  cursor: url("../images/pointer.png"), pointer;
 }
 
 @media (min-width: 768px) {
@@ -257,7 +258,7 @@ body {
 }
 
 .button-search:hover {
-  cursor: pointer;
+  cursor: url("../images/pointer.png"), pointer;
   background-color: #60abff;
 }
 
@@ -584,6 +585,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: url("../images/pointer.png"), pointer;
 }
 
 @media (min-width: 768px) {
