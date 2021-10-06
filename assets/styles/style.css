@@ -64,6 +64,16 @@ body {
   }
 }
 
+.header #text-mode {
+  margin-top: 6px;
+}
+
+.header .icon-container {
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
+}
+
 .button-mode {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,9 +113,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-image: url("../images/icon-search.svg");
-  background-size: 7%;
+  background-size: 6.5%;
   background-repeat: no-repeat;
-  background-position-x: 8px;
+  background-position-x: 12px;
   background-position-y: center;
 }
 
@@ -119,6 +129,7 @@ body {
 @media (min-width: 1440px) {
   .searchbar-container {
     height: 69px;
+    background-size: 3.5%;
   }
 }
 
@@ -128,20 +139,14 @@ body {
           flex: 1;
 }
 
-.searchbar-container img {
-  height: 20px;
-  width: 20px;
-  padding: 0 10px 0px 16px;
-}
-
 .input {
   border: none;
-  width: 100%;
+  width: 105%;
   height: 100%;
   outline: none;
   background: none;
   color: #4B6A9B;
-  padding-left: 18%;
+  padding-left: 16%;
   line-height: 25px;
   font-size: 13px;
 }
@@ -154,30 +159,38 @@ body {
 
 .input::-webkit-input-placeholder {
   color: #4B6A9B;
-  letter-spacing: 0.2px;
   font-weight: 400;
   font-size: 13px;
+  word-spacing: -4px;
+  padding-left: 2px;
+  width: 100%;
 }
 
 .input:-ms-input-placeholder {
   color: #4B6A9B;
-  letter-spacing: 0.2px;
   font-weight: 400;
   font-size: 13px;
+  word-spacing: -4px;
+  padding-left: 2px;
+  width: 100%;
 }
 
 .input::-ms-input-placeholder {
   color: #4B6A9B;
-  letter-spacing: 0.2px;
   font-weight: 400;
   font-size: 13px;
+  word-spacing: -4px;
+  padding-left: 2px;
+  width: 100%;
 }
 
 .input::placeholder {
   color: #4B6A9B;
-  letter-spacing: 0.2px;
   font-weight: 400;
   font-size: 13px;
+  word-spacing: -4px;
+  padding-left: 2px;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -449,6 +462,7 @@ body {
   #bio {
     font-size: 15px;
     padding-top: 28px;
+    max-width: 483px;
   }
 }
 
@@ -473,6 +487,8 @@ body {
   #date {
     margin-left: 30%;
     font-size: 15px;
+    width: 166px;
+    height: 22px;
   }
 }
 
@@ -592,8 +608,21 @@ body {
 }
 
 .profile-bottom-container .profile-info p {
-  margin-left: 18px;
+  margin-left: 14px;
   color: #4B6A9B;
+  font-size: 13px;
+}
+
+@media (min-width: 1440px) {
+  .profile-bottom-container .profile-info p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-bottom-container .profile-info p {
+    font-size: 15px;
+  }
 }
 
 .profile-bottom-container .network-icons {
@@ -606,14 +635,18 @@ body {
 
 #no-results {
   position: relative;
+  font-size: 12px;
   color: #F74646;
   font-weight: bold;
-  left: 130px;
+  left: 160px;
+  top: 12px;
 }
 
 @media (min-width: 768px) {
   #no-results {
-    left: 350px;
+    left: 360px;
+    font-size: 15px;
+    top: -2px;
   }
 }
 

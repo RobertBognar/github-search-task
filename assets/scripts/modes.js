@@ -19,7 +19,7 @@ function darkModeSettings() {
     userTwitter.style.color = '#FEFEFE';
     userCompany.style.color = '#FEFEFE';
 
-
+    document.getElementsByName('user-input')[0].color = '#FEFEFE';
     textMode.style.color = '#FEFEFE';
     textMode.innerText = 'LIGHT';
     bio.innerText = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';

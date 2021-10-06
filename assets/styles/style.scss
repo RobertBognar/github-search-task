@@ -55,6 +55,14 @@ body {
     @include desktop {
         padding-top: 20%;
     }
+    #text-mode {
+        margin-top: 6px;
+    }
+    .icon-container {
+        margin-top: 4px;
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .button-mode {
@@ -82,9 +90,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-image: url("../images/icon-search.svg");
-    background-size: 7%;
+    background-size: 6.5%;
     background-repeat: no-repeat;
-    background-position-x: 8px;
+    background-position-x: 12px;
     background-position-y: center;
     @include tablet {
         background-size: 4%;
@@ -92,25 +100,21 @@ body {
     }
     @include desktop {
         height: 69px;
+        background-size: 3.5%;
     }
     label {
         flex: 1;
-    }
-    img {
-        height: 20px;
-        width: 20px;
-        padding: 0 10px 0px 16px;
     }
 }
 
 .input {
     border: none;
-    width: 100%;
+    width: 105%;
     height: 100%;
     outline: none;
     background: none;
     color: $networkTextColor;
-    padding-left: 18%;
+    padding-left: 16%;
     line-height: $searchPlaceholderMobileLineHeight;
     font-size: 13px;
     @include tablet {
@@ -118,9 +122,11 @@ body {
     }
     &::placeholder {
         color: $networkTextColor;
-        letter-spacing: 0.2px;
         font-weight: $smallFontWeight;
         font-size: $statsNameDesktopFontSize;
+        word-spacing: -4px;
+        padding-left: 2px;
+        width: 100%;
         @include tablet {
             position: absolute;
             left: 60px;
@@ -132,6 +138,8 @@ body {
         }
     }
 }
+
+
 
 .button-search {
     background-color: $atUsernameColor; 
@@ -280,6 +288,7 @@ body {
     @include desktop {
         font-size: 15px;
         padding-top: 28px;
+        max-width: 483px;
     }
 }
 
@@ -363,8 +372,15 @@ body {
     .profile-info {
         display: flex;
         p {
-            margin-left: 18px;
+            margin-left: 14px;
             color: $networkTextColor;
+            font-size: 13px;
+            @include desktop {
+                font-size: $joinedDesktopFontSize;
+            }
+            @include tablet {
+                font-size: $joinedDesktopFontSize;
+            }
         }
     }
     .network-icons {
@@ -378,11 +394,15 @@ body {
 
 #no-results {
     position: relative;
+    font-size: 12px;
     color: $errorTextColor;
     font-weight: bold;
-    left: 130px;
+    left: 160px;
+    top: 12px;
     @include tablet {
-        left: 350px;
+        left: 360px;
+        font-size: 15px;
+        top: -2px;
     }
     @include desktop {
         left: 500px;
