@@ -1,6 +1,7 @@
 //Dark & Light Mode Settings Toggle, using premade get param to short code
 function darkModeSettings() {
     document.body.style.backgroundColor = '#141D2F';
+    document.body.style.transition = '0.5s';
     get('devfinder').style.color = '#FEFEFE';
     get('searchbar').style.backgroundColor = '#1E2A47';
     get('profilecontainer').style.backgroundColor = '#1E2A47';
@@ -18,8 +19,8 @@ function darkModeSettings() {
     userPage.style.color = '#FEFEFE';
     userTwitter.style.color = '#FEFEFE';
     userCompany.style.color = '#FEFEFE';
-    
-    
+
+
     textMode.style.color = '#FEFEFE';
     textMode.innerText = 'LIGHT';
     bio.innerText = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.';
