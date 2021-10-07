@@ -377,9 +377,6 @@ body {
             margin-left: 14px;
             color: $networkTextColor;
             font-size: 13px;
-            &:hover{
-                text-decoration: underline;
-            }
             @include desktop {
                 font-size: $joinedDesktopFontSize;
             }
@@ -390,6 +387,11 @@ body {
     }
     .network-icons {
         width: 20px;
+    }
+    #page {
+        &:hover{
+            text-decoration: underline;
+        }
     }
 }
 

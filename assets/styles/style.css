@@ -618,10 +618,6 @@ body {
   font-size: 13px;
 }
 
-.profile-bottom-container .profile-info p:hover {
-  text-decoration: underline;
-}
-
 @media (min-width: 1440px) {
   .profile-bottom-container .profile-info p {
     font-size: 15px;
@@ -636,6 +632,10 @@ body {
 
 .profile-bottom-container .network-icons {
   width: 20px;
+}
+
+.profile-bottom-container #page:hover {
+  text-decoration: underline;
 }
 
 .error {
