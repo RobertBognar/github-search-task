@@ -21,6 +21,7 @@
 
 body {
     background-color: $lightBackgroundColor;
+    transition: ease 0.5s;
 }
 
 .container {
@@ -75,6 +76,7 @@ body {
     font-weight: bold;
     color: $networkTextColor;
     &:hover {
+        color: #222731;
         cursor: $cursor;
     }
 }
@@ -411,4 +413,55 @@ body {
 
 .active {
     box-shadow: $activeShadow;
+}
+
+.dark {
+    background-color: $darkBackgroundColor;
+    transition: ease 0.5s;
+    .title {
+        color: $basicWhiteColor;
+    }
+    .button-mode {
+        color: $basicWhiteColor;
+        &:hover {
+            color: #90A4D4;
+        }
+    }
+    .searchbar-container {
+        background-color: $darkBoxBackgroundColor;
+    }
+    .input {
+        color: $basicWhiteColor;
+        &::placeholder {
+            color: $basicWhiteColor;
+        }
+    }
+    .profile-container {
+        background-color: $darkBoxBackgroundColor;
+        #name {
+            color: $basicWhiteColor;
+        }
+        #date {
+            color: $basicWhiteColor;
+        }
+        #bio {
+            color: $basicWhiteColor;
+        }
+    }
+    .profile-stats-container {
+        background-color: $darkBackgroundColor;
+        .stat-title {
+            color: $basicWhiteColor;
+        }
+        .stat-value {
+            color: $basicWhiteColor;
+        }
+    }
+    .profile-bottom-container {
+        .profile-info {
+            p {
+                color: $basicWhiteColor;
+            }
+        }
+    }
 }

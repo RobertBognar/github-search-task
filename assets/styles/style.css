@@ -8,6 +8,8 @@
 
 body {
   background-color: #f6f8ff;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
 }
 
 .container {
@@ -92,6 +94,7 @@ body {
 }
 
 .button-mode:hover {
+  color: #222731;
   cursor: url("../images/pointer.png"), pointer;
 }
 
@@ -661,5 +664,79 @@ body {
 .active {
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+  background-color: #141d2f;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.dark .title {
+  color: #ffffff;
+}
+
+.dark .button-mode {
+  color: #ffffff;
+}
+
+.dark .button-mode:hover {
+  color: #90A4D4;
+}
+
+.dark .searchbar-container {
+  background-color: #1e2a47;
+}
+
+.dark .input {
+  color: #ffffff;
+}
+
+.dark .input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.dark .input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.dark .input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.dark .input::placeholder {
+  color: #ffffff;
+}
+
+.dark .profile-container {
+  background-color: #1e2a47;
+}
+
+.dark .profile-container #name {
+  color: #ffffff;
+}
+
+.dark .profile-container #date {
+  color: #ffffff;
+}
+
+.dark .profile-container #bio {
+  color: #ffffff;
+}
+
+.dark .profile-stats-container {
+  background-color: #141d2f;
+}
+
+.dark .profile-stats-container .stat-title {
+  color: #ffffff;
+}
+
+.dark .profile-stats-container .stat-value {
+  color: #ffffff;
+}
+
+.dark .profile-bottom-container .profile-info p {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 //Importing variables & defining all variables
 const searchBar = document.querySelector('.searchbar-container');
 const profileContainer = document.querySelector('.profile-container');
+const body = document.querySelector('body');
 //Using params for shorter code and passing it to getElementById
 const get = (param) => document.getElementById(`${param}`);
 //Header Params
@@ -40,7 +41,7 @@ const userLocation = get('location');
 const userPage = get('page');
 const userTwitter = get('twitter');
 const userCompany = get('company');
-let darkMode = false;
+//let darkMode = false;
 //API URL
 const url = 'https://api.github.com/users/';
 

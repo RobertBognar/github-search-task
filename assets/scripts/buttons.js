@@ -27,9 +27,15 @@ input.addEventListener('input', function () {
 });
 
 btnMode.addEventListener('click', function () {
-    if (darkMode === false) {
-        darkModeSettings();
+    if (body.classList.value === 'dark') {
+        body.classList.remove('dark');
+        textMode.innerHTML = 'DARK';
+        iconMode.src = './assets/images/icon-moon.svg';
+        bio.innerText = 'This profile has no bio.'
     } else {
-        lightModeSettings();
+        body.classList.add('dark');
+        textMode.innerHTML = 'LIGHT';
+        iconMode.src = './assets/images/icon-sun.svg';
+        bio.innerText = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.'
     }
 });
