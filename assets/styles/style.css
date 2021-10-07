@@ -739,4 +739,9 @@ body {
 .dark .profile-bottom-container .profile-info p {
   color: #ffffff;
 }
+
+.dark .network-icons {
+  -webkit-filter: brightness(5);
+          filter: brightness(5);
+}
 /*# sourceMappingURL=style.css.map */
