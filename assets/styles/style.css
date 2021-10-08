@@ -94,7 +94,8 @@ body {
 }
 
 .button-mode:hover {
-  color: #222731;
+  -webkit-filter: brightness(0%) contrast(74%) grayscale(100%) hue-rotate(360deg) saturate(200%);
+  filter: brightness(0%) contrast(74%) grayscale(100%) hue-rotate(360deg) saturate(200%);
   cursor: url("../images/pointer.png"), pointer;
 }
 
@@ -685,7 +686,8 @@ body {
 }
 
 .dark .button-mode:hover {
-  color: #90A4D4;
+  -webkit-filter: invert(58%) sepia(40%) saturate(416%) hue-rotate(184deg) brightness(170%) contrast(89%);
+          filter: invert(58%) sepia(40%) saturate(416%) hue-rotate(184deg) brightness(170%) contrast(89%);
 }
 
 .dark .searchbar-container {
