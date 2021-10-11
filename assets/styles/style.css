@@ -592,6 +592,10 @@ body {
   cursor: url("../images/pointer.png"), pointer;
 }
 
+.profile-bottom-container a {
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .profile-bottom-container {
     -webkit-box-orient: horizontal;
@@ -635,7 +639,7 @@ body {
   width: 20px;
 }
 
-.profile-bottom-container #page:hover {
+.profile-bottom-container #page:hover, .profile-bottom-container #company:hover, .profile-bottom-container #location:hover, .profile-bottom-container #twitter:hover {
   text-decoration: underline;
 }
 
