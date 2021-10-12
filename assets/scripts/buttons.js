@@ -31,11 +31,9 @@ btnMode.addEventListener('click', function () {
         body.classList.remove('dark');
         textMode.innerHTML = 'DARK';
         iconMode.src = './assets/images/icon-moon.svg';
-        bio.innerText = 'This profile has no bio.'
     } else {
         body.classList.add('dark');
         textMode.innerHTML = 'LIGHT';
         iconMode.src = './assets/images/icon-sun.svg';
-        bio.innerText = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.'
     }
 });

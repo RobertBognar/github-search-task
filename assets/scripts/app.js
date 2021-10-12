@@ -76,6 +76,12 @@ function profileUpdate(data) {
         //Importing values from API values
         avatar.src = `${data.avatar_url}`;
         userName.innerText = `${data.name}`;
+        //NoName
+        if (!data.name) {
+            userName.innerHTML = data.login;
+        } else {
+            userName.innerHTML = data.name;
+        }
         user.innerText = `@${data.login}`;
         datesegments = data.created_at.split('T').shift().split('-');
         date.innerText = `Joined ${datesegments[2]} ${months[datesegments[1] - 1]
