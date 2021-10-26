@@ -1,0 +1,479 @@
+@import 'variables';
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $mainFontFamily;
+}
+
+body {
+    background-color: $lightBackgroundColor;
+    transition: ease 0.5s;
+}
+
+.container {
+    max-width: 327px;
+    margin: auto;
+    @include tablet {
+        max-width: 573px;
+    }
+    @include desktop {
+        max-width: 730px;
+        margin-top: 32px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+    padding-top: 8%;
+    h1 {
+        font-size: $devfinderDesktopFontSize;
+        font-weight: $bigFontWeight;
+        color: $devfinderBlackColor;
+    }
+    p {
+        font-size: $statsNameDesktopFontSize;
+    }
+    @include tablet {
+        padding-top: 16%;
+    }
+    @include desktop {
+        padding-top: 20%;
+    }
+    #text-mode {
+        margin-top: 6px;
+    }
+    .icon-container {
+        margin-top: 4px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.button-mode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 2px;
+    width: 78px;
+    height: 20px;
+    font-weight: bold;
+    color: $networkTextColor;
+    &:hover {
+        -webkit-filter: brightness(0%) contrast(74%) grayscale(100%) hue-rotate(360deg) saturate(200%);
+        filter: brightness(0%) contrast(74%) grayscale(100%) hue-rotate(360deg) saturate(200%);
+        cursor: $cursor;
+    }
+}
+
+.searchbar-container {
+    background-color: $lightBoxBackgroundColor;
+    border-radius: 15px;
+    margin-top: 8%;
+    box-shadow: $inactiveShadow;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../images/icon-search.svg');
+    background-size: 6%;
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    cursor: $cursor;
+    @include tablet {
+        background-size: 4%;
+        background-position-x: 4%;
+    }
+    @include desktop {
+        height: 69px;
+        background-size: 3.5%;
+    }
+    label {
+        flex: 1;
+    }
+}
+
+.input {
+    border: none;
+    width: 105%;
+    height: 100%;
+    outline: none;
+    background: none;
+    color: $networkTextColor;
+    padding-left: 16%;
+    line-height: $searchPlaceholderMobileLineHeight;
+    font-size: 13px;
+    @include tablet {
+        font-size: 18px;
+    }
+    &::placeholder {
+        color: $networkTextColor;
+        font-weight: $smallFontWeight;
+        font-size: $statsNameDesktopFontSize;
+        word-spacing: -4px;
+        padding-left: 4px;
+        width: 100%;
+        @include tablet {
+            position: absolute;
+            left: 60px;
+            font-size: 18px;
+            line-height: $searchPlaceholderMobileLineHeight;
+        }
+        @include desktop {
+            left: 76px;
+        }
+    }
+}
+
+.button-search {
+    background-color: $atUsernameColor;
+    min-width: 84px;
+    height: 75%;
+    margin-right: 2%;
+    border: none;
+    border-radius: 10px;
+    color: $basicWhiteColor;
+    font-size: $buttonFontSize;
+    font-weight: $bigFontWeight;
+    letter-spacing: 0.2px;
+    line-height: $buttonLineHeight;
+    @include tablet {
+        margin-right: 10px;
+        min-width: 106px;
+    }
+    &:hover {
+        cursor: $cursor;
+        background-color: $buttonHoverColor;
+    }
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+.profile-container {
+    background-color: $basicWhiteColor;
+    width: 327px;
+    min-height: 517px;
+    border-radius: 15px;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: $inactiveShadow;
+    @include tablet {
+        margin-top: 24px;
+        width: 100%;
+    }
+    @include desktop {
+        min-height: 419px;
+    }
+}
+
+.profile-content {
+    width: 280px;
+    height: 481px;
+    min-height: 517px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+    @include tablet {
+        width: 493px;
+    }
+    @include desktop {
+        max-width: 480px;
+        margin-left: 200px;
+        min-height: 400px;
+        max-height: 400px;
+    }
+}
+
+.profile-header {
+    display: flex;
+    @include desktop {
+        position: relative;
+        right: 160px;
+        max-height: 40px;
+        max-width: 625px;
+    }
+}
+
+#avatar {
+    border-radius: 90px;
+    width: 70px;
+    height: 70px;
+    @include tablet {
+        width: 117px;
+        height: 117px;
+    }
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+        font-size: $buttonDesktopFontSize;
+        font-weight: bold;
+        color: $gitUsernameColor;
+    }
+    @include desktop {
+        min-height: 100px;
+        justify-content: flex-start;
+    }
+}
+
+#user {
+    margin-left: 1%;
+    color: $atUsernameColor;
+    @include tablet {
+        font-size: $buttonDesktopFontSize;
+        margin-left: 2%;
+    }
+}
+
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 70px;
+    margin-left: 20px;
+    @include tablet {
+        min-height: 117px;
+        justify-content: center;
+        margin-left: 38px;
+    }
+    @include desktop {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        min-width: 100%;
+        height: 60px;
+    }
+}
+
+#name {
+    @include tablet {
+        font-size: $devfinderDesktopFontSize;
+    }
+}
+
+#bio {
+    line-height: 25px;
+    color: $networkTextColor;
+    padding-top: 10px;
+
+    width: 289px;
+    font-size: 13px;
+    @include tablet {
+        width: 493px;
+        font-size: 15px;
+        margin-top: -24px;
+    }
+    @include desktop {
+        font-size: 15px;
+        padding-top: 28px;
+        max-width: 483px;
+    }
+}
+
+#date {
+    color: $darkModeColor;
+    margin-left: 0.5%;
+    margin-top: 2%;
+    font-size: 13px;
+    width: 144px;
+    height: 19px;
+    @include tablet {
+        margin-left: 1%;
+        width: 166px;
+        height: 22px;
+    }
+    @include desktop {
+        margin-left: 30%;
+        font-size: 15px;
+        width: 166px;
+        height: 22px;
+    }
+}
+
+.profile-stats-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: $lightBackgroundColor;
+    border-radius: 10px;
+    @include tablet {
+        padding-left: 40px;
+    }
+}
+
+.profile-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 85px;
+    @include tablet {
+        text-align: start;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .stat-title {
+        font-size: $statTitleSize;
+        color: $networkTextColor;
+        font-weight: $smallFontWeight;
+        line-height: 16px;
+        letter-spacing: 1px;
+        @include tablet {
+            font-size: $backgroundModeFontSize;
+        }
+        @include desktop {
+            font-weight: $smallFontWeight;
+        }
+    }
+    .stat-value {
+        color: $gitUsernameColor;
+        font-size: $buttonDesktopFontSize;
+        font-weight: bold;
+        @include tablet {
+            font-size: 25px;
+            text-align: start;
+        }
+    }
+}
+
+.profile-bottom-container {
+    height: 127px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: $cursor;
+    a {
+        text-decoration: none;
+    }
+    @include tablet {
+        flex-direction: row;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        max-height: 63px;
+    }
+    .profile-info {
+        display: flex;
+        p {
+            margin-left: 14px;
+            color: $networkTextColor;
+            font-size: 13px;
+            @include desktop {
+                font-size: $joinedDesktopFontSize;
+            }
+            @include tablet {
+                font-size: $joinedDesktopFontSize;
+            }
+        }
+    }
+    .network-icons {
+        width: 20px;
+    }
+    #page, #company, #location, #twitter {
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.error {
+    position: absolute;
+}
+
+#no-results {
+    position: relative;
+    font-size: 12px;
+    color: $errorTextColor;
+    font-weight: bold;
+    left: 160px;
+    top: 12px;
+    @include tablet {
+        left: 360px;
+        font-size: 15px;
+        top: -2px;
+    }
+    @include desktop {
+        left: 500px;
+    }
+}
+
+.active {
+    box-shadow: $activeShadow;
+}
+
+.dark {
+    background-color: $darkBackgroundColor;
+    transition: ease 0.5s;
+    .title {
+        color: $basicWhiteColor;
+    }
+    .button-mode {
+        color: $basicWhiteColor;
+        &:hover {
+            filter: invert(58%) sepia(40%) saturate(416%) hue-rotate(184deg) brightness(170%) contrast(89%);
+        }
+    }
+    .searchbar-container {
+        background-color: $darkBoxBackgroundColor;
+    }
+    .input {
+        color: $basicWhiteColor;
+        &::placeholder {
+            color: $basicWhiteColor;
+        }
+    }
+    .profile-container {
+        background-color: $darkBoxBackgroundColor;
+        #name {
+            color: $basicWhiteColor;
+        }
+        #date {
+            color: $basicWhiteColor;
+        }
+        #bio {
+            color: $basicWhiteColor;
+        }
+    }
+    .profile-stats-container {
+        background-color: $darkBackgroundColor;
+        .stat-title {
+            color: $basicWhiteColor;
+        }
+        .stat-value {
+            color: $basicWhiteColor;
+        }
+    }
+    .profile-bottom-container {
+        .profile-info {
+            p {
+                color: $basicWhiteColor;
+            }
+        }
+    }
+    .network-icons {
+        filter: brightness(5);
+    }
+}

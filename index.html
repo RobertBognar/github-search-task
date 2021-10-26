@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>GitHub Search Users</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1 class="title" id="devfinder">devfinder</h1>
+                <div class="button-mode" id="button-mode">
+                    <p id="text-mode">DARK</p>
+                    <div class="icon-container">
+                        <img id="mode-icon" src="./assets/images/icon-moon.svg" alt="dark mode icon" />
+                    </div>
+                </div>
+            </div>
+            <div id="searchbar" class="searchbar-container active">
+                <label for="input">
+                    <input class="input" type="search" name="user-input" id="input"
+                        placeholder="Search GitHub username..." />
+                </label>
+                <button class="button-search" id="submit">Search</button>
+                <div class="error">
+                    <p id="no-results">No results</p>
+                </div>
+            </div>
+            <div id="profilecontainer" class="profile-container">
+                <div class="profile-content">
+                    <div class="profile-header">
+                        <img id="avatar" src="" alt="" />
+                        <div class="profile-info-container">
+                            <div class="profile-name">
+                                <h2 id="name"></h2>
+                                <p id="user"></p>
+                            </div>
+                            <p id="date"></p>
+                        </div>
+                    </div>
+                    <p id="bio"></p>
+                    <div id="profileStatsContainer" class="profile-stats-container">
+                        <div class="profile-stats" id="profileStats">
+                            <p class="stat-title" id="reposStat">Repos</p>
+                            <p class="stat-value" id="repos"></p>
+                        </div>
+                        <div class="profile-stats">
+                            <p class="stat-title" id="followersStat">
+                                Followers
+                            </p>
+                            <p class="stat-value" id="followers"></p>
+                        </div>
+                        <div class="profile-stats">
+                            <p class="stat-title" id="followingStats">
+                                Following
+                            </p>
+                            <p class="stat-value" id="following"></p>
+                        </div>
+                    </div>
+                    <div class="profile-bottom-container">
+                        <div class="profile-info">
+                            <div class="network-icons">
+                                <img src="./assets/images/icon-location.svg" alt="icon location" />
+                            </div>
+                            <a href="https://www.google.com/maps" target="_blank">
+                                <p id="location"></p>
+                            </a>
+                        </div>
+                        <div class="profile-info">
+                            <div class="network-icons">
+                                <img src="./assets/images/icon-website.svg" alt="icon website" />
+                            </div>
+                            <a href="https://github.blog/" target="_blank">
+                                <p id="page"></p>
+                            </a>
+                        </div>
+                        <div class="profile-info">
+                            <div class="network-icons">
+                                <img src="./assets/images/icon-twitter.svg" alt="icon twitter" />
+                            </div>
+                            <p id="twitter"></p>
+                        </div>
+                        <div class="profile-info">
+                            <div class="network-icons">
+                                <img src="./assets/images/icon-company.svg" alt="icon company" />
+                            </div>
+                            <a href="https://github.com/" target="_blank">
+                                <p id="company"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/scripts/app.js"></script>
+    <script src="./assets/scripts/buttons.js"></script>
+</body>
+
+</html>
